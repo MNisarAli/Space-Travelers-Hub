@@ -1,8 +1,10 @@
+import Navigation from './components/Navigation';
+
 function App() {
   return (
     <>
       <header className="App-header">
-        Space Travelers Hub
+        <Navigation />
       </header>
     </>
   );
