@@ -7,11 +7,11 @@ const App = () => (
     <header className="App-header">
       <Navigation />
     </header>
-      <main>
-        <Routes>
-          <Route path="/" element={<Rockets />} />
-        </Routes>
-      </main>
+    <main>
+      <Routes>
+        <Route path="/" element={<Rockets />} />
+      </Routes>
+    </main>
   </>
 );
 
