@@ -15,6 +15,7 @@ nav {
   justify-content: space-between;
   box-shadow: 0 1px 2px 0 rgb(14 30 37 / 12%), 0 1px 8px 0 rgb(14 30 37 / 8%);
   border-bottom: 1px solid #e8e8e8;
+  background-color: #fff;
   box-sizing: border-box;
   padding: 0.2rem 3rem;
   position: fixed;
@@ -65,4 +66,8 @@ nav {
   font-weight: 500;
   text-decoration: underline;
   text-underline-position: under;
+}
+
+main {
+  margin: 6rem;
 }
