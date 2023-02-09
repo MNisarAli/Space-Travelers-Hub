@@ -17,7 +17,6 @@ const fetchedMissions = createAsyncThunk(
       id: mission.mission_id,
       description: mission.description,
     }));
-    console.log(missions);
     return missions;
   },
 );
