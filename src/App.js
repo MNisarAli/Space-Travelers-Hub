@@ -11,10 +11,10 @@ function App() {
           <Navigation />
         </header>
         <main>
-        <Routes>
-          <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<Mission />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Rockets />} />
+            <Route path="/missions" element={<Mission />} />
+          </Routes>
         </main>
       </BrowserRouter>
     </>
