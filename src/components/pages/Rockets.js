@@ -13,7 +13,17 @@ const Rockets = () => {
   }, [dispatch]); // Added `dispatch` function as a dependency to re-run the effect when it changes.
 
   return (
-    <div>Rockets</div>
+    <section className="rockets-container">
+      {rockets.map((rocket) => (
+        <li className="rocket" key={rocket.id}>
+          <img className="rocket-img" src={rocket.image} alt={rocket.name} />
+          <article className="rocket-info">
+            <h2 className="rocket-name">{rocket.name}</h2>
+            <p className="rocket-description">{rocket.description}</p>
+          </article>
+        </li>
+      ))}
+    </section>
   );
 };
 
