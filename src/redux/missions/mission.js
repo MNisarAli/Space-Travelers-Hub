@@ -43,4 +43,9 @@ export const fetchedMissions = createAsyncThunk(FETCH_MISSIONS, async (arg, thun
   thunkAPI.dispatch({ type: FETCH_MISSIONS, payload });
 });
 
+export const joinMission = (payload) => ({
+  type: JOIN_MISSION,
+  payload,
+});
+
 export default missionsReducer;

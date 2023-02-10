@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchedMissions } from '../../redux/missions/mission';
+import { fetchedMissions, joinMission } from '../../redux/missions/mission';
 import '../../style.css';
 
 const MissionsTable = () => {
@@ -13,6 +13,10 @@ const MissionsTable = () => {
       dispatch(fetchedMissions());
     }
   }, [dispatch, status]);
+
+  const handleClick = (mission) => {
+    dispatch(joinMission(mission));
+  };
 
   return (
     <table>
@@ -44,7 +48,7 @@ const MissionsTable = () => {
                   <button
                     type="button"
                     className={`${isReserved && 'btn-active'}`}
-                    // onClick={() => handleClick(mission)}
+                    onClick={() => handleClick(mission)}
                   >
                     {isReserved ? 'Leave Mission' : 'Join Mission'}
                   </button>
