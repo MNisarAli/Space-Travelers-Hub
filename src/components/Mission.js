@@ -1,15 +1,6 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchedMissions } from '../redux/missions/mission';
+import React from 'react';
+import MissionsTable from './pages/MissionTable';
 
-const Missions = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchedMissions());
-  }, [dispatch]);
-  const data = useSelector((state) => state.missions);
-  // const { missions } = data;
-  console.log(data);
-};
+const Missions = () => <MissionsTable />;
 
 export default Missions;

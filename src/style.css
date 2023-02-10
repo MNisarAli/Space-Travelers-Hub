@@ -28,3 +28,15 @@ td {
 tr:nth-child(odd) {
   background-color: #ddd;
 }
+
+.flex {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 0 1rem;
+}
+
+.ele {
+  border: 1px solid;
+  width: 90%;
+  text-align: center;
+}
