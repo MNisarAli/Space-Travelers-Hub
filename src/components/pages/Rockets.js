@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../../redux/rockets/rockets';
+import { fetchRockets, reserveRocket } from '../../redux/rockets/rockets';
 
 const Rockets = () => {
   // `useDispatch` hook to access the `dispatch` function from `store`.
@@ -20,6 +20,9 @@ const Rockets = () => {
           <article className="rocket-info">
             <h2 className="rocket-name">{rocket.name}</h2>
             <p className="rocket-description">{rocket.description}</p>
+            <button className="rocket-reserve-btn" type="button" onClick={() => dispatch(reserveRocket(rocket.id))}>
+              Reserve Rocket
+            </button>
           </article>
         </li>
       ))}
