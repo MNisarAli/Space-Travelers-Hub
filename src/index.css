@@ -18,8 +18,7 @@ nav {
   background-color: #fff;
   box-sizing: border-box;
   padding: 0.2rem 3rem;
-
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   z-index: 2;
   top: 0;
