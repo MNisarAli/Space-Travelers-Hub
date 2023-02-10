@@ -19,6 +19,10 @@ th {
   border: 1px solid #ddd;
 }
 
+th:nth-child(3) {
+  width: 8rem;
+}
+
 td {
   border: 1px solid #b8b8b8;
   padding: 1rem;
@@ -39,4 +43,33 @@ tr:nth-child(odd) {
   border: 1px solid;
   width: 90%;
   text-align: center;
+}
+
+button {
+  border: 1px solid #292828;
+  border-radius: 5px;
+  color: #292828;
+  padding: 0.4em;
+  text-transform: capitalize;
+  cursor: pointer;
+  width: 9rem;
+}
+
+.btn-active {
+  color: #f83f3f;
+  border-color: #f83f3f;
+}
+
+.badge {
+  background-color: #878787;
+  border-radius: 3px;
+  padding: 0.15em 0.45em;
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.badge-active {
+  background-color: #4da0ff;
+  width: 5rem;
 }
