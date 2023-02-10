@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+table {
+  width: 96%;
+  margin: 0 2%;
+  border: 1px solid #ddd;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+td {
+  border: 1px solid #b8b8b8;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+tr:nth-child(odd) {
+  background-color: #ddd;
+}
