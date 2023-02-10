@@ -2,7 +2,7 @@ import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import rocketReducer from './rockets/rockets';
 
-const Store = configureStore(
+const store = configureStore(
   {
     // Assign the rocketReducer to the rockets key in the store.
     reducer: {
