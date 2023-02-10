@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-header {
@@ -57,7 +57,7 @@ nav {
 
 .nav-link {
   color: #2088ff;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 1.5px;
   text-decoration: none;
@@ -70,5 +70,37 @@ nav {
 }
 
 main {
-  margin: 6rem;
+  margin: 7.2rem 9rem 4rem;
+}
+
+.rockets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.rocket {
+  display: flex;
+  gap: 2rem;
+}
+
+.rocket-img {
+  box-shadow: 2px 2px 8px 2px #acabab;
+  width: 30%;
+}
+
+.rocket-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-name {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.rocket-description {
+  font-weight: inherit;
+  font-size: 1.1rem;
+  letter-spacing: 1.2px;
 }

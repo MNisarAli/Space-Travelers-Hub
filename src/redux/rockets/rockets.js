@@ -15,7 +15,7 @@ export const fetchRockets = createAsyncThunk(
     const rockets = data.map((rocket) => ({
       id: rocket.rocket_id,
       name: rocket.rocket_name,
-      type: rocket.rocket_type,
+      description: rocket.description,
       image: rocket.flickr_images[0],
     }));
     // Dispatch the action with the payload of the mapped data
