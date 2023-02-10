@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchedMissions, joinMission } from '../../redux/missions/mission';
+import Badge from '../Badge';
 import '../../style.css';
 
 const MissionsTable = () => {
@@ -39,10 +40,10 @@ const MissionsTable = () => {
                 <td>{name}</td>
                 <td>{description}</td>
                 <td>
-                  {/* <Badge
+                  <Badge
                     text={isReserved ? 'Active member' : 'Not a member'}
                     active={isReserved}
-                  /> */}
+                  />
                 </td>
                 <td>
                   <button
