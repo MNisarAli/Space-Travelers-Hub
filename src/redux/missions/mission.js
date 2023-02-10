@@ -1,33 +1,51 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import missionsService from '../../fetchMissions';
 
-// const Api = 'https://api.spacexdata.com/v3/missions';
+const FETCH_MISSIONS = 'FETCH_MISSIONS';
+const JOIN_MISSION = 'JOIN_MISSION';
 
-const initialState = [];
+const initialState = {
+  status: 'idle',
+  missions: [],
+};
 
-const FETCH_MISSIONS = 'space-travelers-hub/missions/FETCH_MISSIONS';
-
-const fetchedMissions = createAsyncThunk(
-  FETCH_MISSIONS,
-  async () => {
-    const response = await axios.get('https://api.spacexdata.com/v3/missions');
-    const { data } = response;
-    const missions = data.map((mission) => ({
-      name: mission.mission_name,
-      id: mission.mission_id,
-      description: mission.description,
-    }));
-    return missions;
-  },
-);
-
-export default function missionsReducer(state = initialState, action) {
+const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case `${FETCH_MISSIONS}/fulfilled`:
-      return [...state, ...action.payload];
+    case FETCH_MISSIONS:
+      return {
+        ...state,
+        status: 'succeeded',
+        missions: action.payload,
+      };
+
+    case JOIN_MISSION: {
+      const clone = [...state.missions];
+      const updatedMissions = clone.map((item) => {
+        if (item.id !== action.payload.id) {
+          return item;
+        }
+        return { ...item, isReserved: !item.isReserved };
+      });
+
+      return {
+        ...state,
+        missions: updatedMissions,
+      };
+    }
+
     default:
       return state;
   }
-}
+};
 
-export { fetchedMissions };
+export const fetchedMissions = createAsyncThunk(FETCH_MISSIONS, async (arg, thunkAPI) => {
+  const payload = await missionsService.getAllMissions();
+  thunkAPI.dispatch({ type: FETCH_MISSIONS, payload });
+});
+
+export const joinMission = (payload) => ({
+  type: JOIN_MISSION,
+  payload,
+});
+
+export default missionsReducer;
