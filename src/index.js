@@ -6,7 +6,6 @@ import store from './redux/configStore';
 import Store from './redux/configureStore';
 import './index.css';
 import App from './App';
-import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
