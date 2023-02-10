@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Mission from './components/pages/Mission';
 import Rockets from './components/pages/Rockets';
-import Mission from './components/pages/Mission';
 
 function App() {
   return (
