@@ -19,7 +19,10 @@ const Rockets = () => {
           <img className="rocket-img" src={rocket.image} alt={rocket.name} />
           <article className="rocket-info">
             <h2 className="rocket-name">{rocket.name}</h2>
-            <p className="rocket-description">{rocket.description}</p>
+            <p className="rocket-description">
+              {rocket.reserved && <span className="rocket-reserve-tag">Reserved</span>}
+              {rocket.description}
+            </p>
             <button
               className={`rocket-reserve-btn ${rocket.reserved ? 'reserved' : ''}`}
               type="button"
