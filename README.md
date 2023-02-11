@@ -41,7 +41,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- #### [Live link](https://space-travelers-hub-zxf9.onrender.com)
+- #### [Live link](https://group-n9mr.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
