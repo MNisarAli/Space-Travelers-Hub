@@ -1,16 +1,29 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, reserveRocket } from '../../redux/rockets/rockets';
+import { fetchRockets, reserveRocket, cancelReservation } from '../../redux/rockets/rockets';
 
 const Rockets = () => {
-  // `useDispatch` hook to access the `dispatch` function from `store`.
+  // useDispatch hook to access the dispatch function from store.
   const dispatch = useDispatch();
-  // `useSelector` hook to get `rockets` data from the `store`.
+
+  // useSelector hook to get rockets data from the store.
   const rockets = useSelector((state) => state.rockets);
-  // `useEffect` hook to dispatch the `fetchRockets` action when the component is mounted.
+
+  // `handleReserveRocket` dispatches `reserveRocket` action with selected rocket ID.
+  const handleReserveRocket = (id) => {
+    dispatch(reserveRocket(id));
+  };
+
+  // `handleCancelReservation` dispatches `cancelReservation` action with selected rocket ID.
+  const handleCancelReservation = (id) => {
+    dispatch(cancelReservation(id));
+  };
+
+  // useEffect hook to dispatch the `fetchRockets` action when the component is mounted,
+  // to fetch the list of rockets from the API.
   useEffect(() => {
     dispatch(fetchRockets());
-  }, [dispatch]); // Added `dispatch` function as a dependency to re-run the effect when it changes.
+  });
 
   return (
     <section className="rockets-container">
@@ -23,13 +36,15 @@ const Rockets = () => {
               {rocket.reserved && <span className="rocket-reserve-tag">Reserved</span>}
               {rocket.description}
             </p>
-            <button
-              className={`rocket-reserve-btn ${rocket.reserved ? 'reserved' : ''}`}
-              type="button"
-              onClick={() => dispatch(reserveRocket(rocket.id))}
-            >
-              {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-            </button>
+            {rocket.reserved ? (
+              <button className="rocket-reserve-btn reserved" type="button" onClick={() => handleCancelReservation(rocket.id)}>
+                Cancel Reservation
+              </button>
+            ) : (
+              <button className="rocket-reserve-btn" type="button" onClick={() => handleReserveRocket(rocket.id)}>
+                Reserve Rocket
+              </button>
+            )}
           </article>
         </li>
       ))}
