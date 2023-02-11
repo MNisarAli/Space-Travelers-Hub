@@ -105,19 +105,29 @@ main {
   line-height: 1.8rem;
 }
 
+.rocket-reserve-tag {
+  font-size: 0.95rem;
+  line-height: initial;
+  color: #fff;
+  background-color: #18a2b8;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-right: 0.8rem;
+}
+
 .rocket-reserve-btn {
   font-size: 0.95rem;
   color: #fff;
   background-color: #007bff;
-  border: none;
+  border: 1.8px solid #007bff;
   border-radius: 4px;
-  padding: 10px 15px;
+  padding: 9px 14px;
   width: fit-content;
 }
 
 .reserved {
   color: #767676;
-  border: 1.7px solid #767676;
+  border: 1.8px solid #767676;
   background-color: #fff;
   cursor: not-allowed;
 }
