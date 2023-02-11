@@ -20,7 +20,11 @@ const Rockets = () => {
           <article className="rocket-info">
             <h2 className="rocket-name">{rocket.name}</h2>
             <p className="rocket-description">{rocket.description}</p>
-            <button className="rocket-reserve-btn" type="button" onClick={() => dispatch(reserveRocket(rocket.id))}>
+            <button
+              className={`rocket-reserve-btn ${rocket.reserved ? 'reserved' : ''}`}
+              type="button"
+              onClick={() => dispatch(reserveRocket(rocket.id))}
+            >
               Reserve Rocket
             </button>
           </article>
