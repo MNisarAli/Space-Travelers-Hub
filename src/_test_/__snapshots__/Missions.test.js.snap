@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th>
+        Mission
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+      <th
+        aria-label="empty-th"
+      />
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;
