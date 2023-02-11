@@ -28,7 +28,7 @@ const Rockets = () => {
               type="button"
               onClick={() => dispatch(reserveRocket(rocket.id))}
             >
-              Reserve Rocket
+              {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
             </button>
           </article>
         </li>
