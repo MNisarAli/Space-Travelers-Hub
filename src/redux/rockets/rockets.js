@@ -40,12 +40,12 @@ export const cancelReservation = (id) => ({
 const rocketReducer = (state = initialState, action) => {
   switch (action.type) {
     // When the FETCH_ROCKETS action is fulfilled,
-    // return a new state array that combines the previous state and the payload
+    // return the payload of the action only if the state is empty
     case `${FETCH_ROCKETS}/fulfilled`:
-      return [...state, ...action.payload];
+      return state.length === 0 ? action.payload : state;
 
     // When the RESERVE_ROCKET action is dispatched,
-    // map over the state array and update the 'reserved' property of the matc
+    // map over the state array and update the 'reserved' property of the matching item
     case RESERVE_ROCKET:
       return state.map((rocket) => {
         if (rocket.id !== action.id) return rocket;
@@ -53,7 +53,7 @@ const rocketReducer = (state = initialState, action) => {
       });
 
     // When the CANCEL_RESERVATION action is dispatched,
-    // map over the state array and update the 'reserved' property of the matching
+    // map over the state array and update the 'reserved' property of the matching item
     case CANCEL_RESERVATION:
       return state.map((rocket) => {
         if (rocket.id !== action.id) return rocket;
