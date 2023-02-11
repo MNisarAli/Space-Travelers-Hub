@@ -128,7 +128,7 @@ $ npm run deploy
 👤 **Nisare**
 
 :bust_in_silhouette: **Inayat-khan**- GitHub: [@githubhandle](https://github.com/MNisarAli)
-- Twitter: [@edube_winne](https://twitter.com/edube_winne)
+- Twitter: [@Nisar](https://twitter.com/edube_winne)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/winfred-edube-9820a422a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
