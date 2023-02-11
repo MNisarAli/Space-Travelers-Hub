@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Ubuntu&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.App-header {
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 2px 0 rgb(14 30 37 / 12%), 0 1px 8px 0 rgb(14 30 37 / 8%);
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0.2rem 3rem;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.logo-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 0 1rem;
+}
+
+.nav-links li:last-child {
+  border-left: 2px solid;
+  padding-right: 0;
+}
+
+.nav-link {
+  color: #2088ff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+main {
+  margin: 7.2rem 9rem 4rem;
+}
+
+.rockets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.rocket {
+  display: flex;
+  gap: 2rem;
+}
+
+.rocket-img {
+  box-shadow: 2px 2px 8px 2px #acabab;
+  width: 30%;
+}
+
+.rocket-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-name {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.rocket-description {
+  font-weight: inherit;
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+  line-height: 1.8rem;
+}
+
+.rocket-reserve-tag {
+  font-size: 0.95rem;
+  line-height: initial;
+  color: #fff;
+  background-color: #18a2b8;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-right: 0.8rem;
+}
+
+.rocket-reserve-btn {
+  font-size: 0.95rem;
+  color: #fff;
+  background-color: #007bff;
+  border: 1.8px solid #007bff;
+  border-radius: 4px;
+  padding: 9px 14px;
+  width: fit-content;
+}
+
+.reserved {
+  color: #767676;
+  border: 1.8px solid #767676;
+  background-color: #fff;
+  cursor: not-allowed;
+}

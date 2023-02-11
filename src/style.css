@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+table {
+  width: 96%;
+  margin: 0 2%;
+  border: 1px solid #ddd;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+th:nth-child(3) {
+  width: 8rem;
+}
+
+td {
+  border: 1px solid #b8b8b8;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.reserved-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 0 1rem;
+}
+
+.reserved-list {
+  padding: inherit;
+  list-style: none;
+}
+
+.reserved-list li {
+  border: 1px solid #b8b8b8;
+  width: 90%;
+  padding: 0 1rem;
+}
+
+button {
+  border: 1px solid #292828;
+  border-radius: 5px;
+  color: #292828;
+  padding: 0.4em;
+  text-transform: capitalize;
+  cursor: pointer;
+  width: 9rem;
+}
+
+.btn-active {
+  color: #f83f3f;
+  border-color: #f83f3f;
+}
+
+.badge {
+  background-color: #878787;
+  border-radius: 3px;
+  padding: 0.15em 0.45em;
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.badge-active {
+  background-color: #4da0ff;
+  width: 5rem;
+}
