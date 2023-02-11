@@ -65,7 +65,7 @@ The key features of this website include.
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://mnisarali.github.io/Space-Travelers-Hub/)
+- [Live Demo Link](https://group-n9mr.onrender.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
