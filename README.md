@@ -1,6 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
+  <img src="./src/components/assets/logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
   <h3><b>Space Traveler's Hub</b></h3>
 </div>
 
@@ -200,9 +202,8 @@ Give a ⭐️, if you like this project!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
  I would like to thank:
-- [Microverseinc](https://github.com/microverseinc) for.
-  - [Readme-template](https://github.com/microverseinc/readme-template)
-
+- [Microverseinc](https://github.com/microverseinc) for [Readme-template](https://github.com/microverseinc/readme-template)
+- [Icons8](https://icons8.com) for [Space icon](https://icons8.com/icon/c5UdWlZ4iWRe/space)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
