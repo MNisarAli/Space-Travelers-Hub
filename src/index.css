@@ -17,7 +17,7 @@ nav {
   border-bottom: 1px solid #e8e8e8;
   background-color: #fff;
   box-sizing: border-box;
-  padding: 0.2rem 3rem;
+  padding: 0.2rem 5%;
   position: fixed;
   width: 100%;
   z-index: 2;
@@ -43,6 +43,7 @@ nav {
 .nav-links {
   display: flex;
   list-style: none;
+  padding: 0;
 }
 
 .nav-links li {
@@ -69,7 +70,7 @@ nav {
 }
 
 main {
-  margin: 7.2rem 9rem 4rem;
+  margin: 7.2rem 6% 4rem;
 }
 
 .rockets-container {
@@ -130,4 +131,43 @@ main {
   border: 1.8px solid #767676;
   background-color: #fff;
   cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    position: initial;
+    padding: 1rem;
+  }
+
+  .logo-container {
+    border-bottom: 1px solid;
+    padding-bottom: 0.5rem;
+  }
+
+  .logo-title {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    align-items: center;
+    margin-bottom: 0.3rem;
+  }
+
+  main {
+    margin: 2.5rem 1rem;
+  }
+
+  .rocket {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rocket-img {
+    width: 100%;
+  }
+
+  .rocket-name {
+    margin-bottom: 0;
+  }
 }
